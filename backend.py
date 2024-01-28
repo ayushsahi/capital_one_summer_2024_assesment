@@ -39,10 +39,21 @@ def login(username, password) -> bool:
     
 def calculatePoints(merchantCode: str, purchaseAmount: float, username: str) -> float:
     
+    rules = { "sport_check": {75: [500, 300, 200],
+                              25: [150, 75],
+                              20: [75]},
+                "tim_hortons": {25: [500, 300],
+                                10: [75]},
+                "subway": {25: [500], 
+                            10: [150]}
+            }
     
-    
-    
-    
+
+
+    if rules[merchantCode] is not None:
+        for threshold in rules[merchantCode].keys():
+            if purchaseAmount % threshold != purchaseAmount:
+                print(threshold, rules[merchantCode][threshold])
 
 if __name__ == '__main__':
     print('Starting...')

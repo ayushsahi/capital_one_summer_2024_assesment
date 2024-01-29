@@ -1,1 +1,180 @@
-{}
+{
+    "ayushsahi": {
+        "complete_transaction_history": {
+            "1": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 4.9,
+                "points_earned": 0
+            },
+            "2": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 2.9,
+                "points_earned": 0
+            },
+            "3": {
+                "date": "28-01-2024",
+                "merchantCode": "sport_check",
+                "purchaseAmount": 99,
+                "points_earned": 0
+            },
+            "4": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 10,
+                "points_earned": 0
+            },
+            "5": {
+                "date": "28-01-2024",
+                "merchantCode": "subway",
+                "purchaseAmount": 19,
+                "points_earned": 0
+            },
+            "6": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 1.9,
+                "points_earned": 0
+            },
+            "7": {
+                "date": "28-01-2024",
+                "merchantCode": "apple",
+                "purchaseAmount": 999,
+                "points_earned": 0
+            },
+            "8": {
+                "date": "28-01-2024",
+                "merchantCode": "walmart",
+                "purchaseAmount": 67,
+                "points_earned": 0
+            },
+            "9": {
+                "date": "28-01-2024",
+                "merchantCode": "sport_check",
+                "purchaseAmount": 5,
+                "points_earned": 0
+            },
+            "10": {
+                "date": "28-01-2024",
+                "merchantCode": "sport_check",
+                "purchaseAmount": 277,
+                "points_earned": 0
+            },
+            "11": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 9.9,
+                "points_earned": 0
+            },
+            "12": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 1.9,
+                "points_earned": 0
+            },
+            "13": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 10.9,
+                "points_earned": 0
+            },
+            "14": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 2.9,
+                "points_earned": 0
+            },
+            "15": {
+                "date": "28-01-2024",
+                "merchantCode": "subway",
+                "purchaseAmount": 21.4,
+                "points_earned": 0
+            },
+            "16": {
+                "date": "28-01-2024",
+                "merchantCode": "dennys",
+                "purchaseAmount": 47,
+                "points_earned": 0
+            },
+            "17": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 1.9,
+                "points_earned": 0
+            },
+            "18": {
+                "date": "28-01-2024",
+                "merchantCode": "tim_hortons",
+                "purchaseAmount": 1.9,
+                "points_earned": 0
+            },
+            "19": {
+                "date": "28-01-2024",
+                "merchantCode": "walmart",
+                "purchaseAmount": 82,
+                "points_earned": 0
+            },
+            "20": {
+                "date": "28-01-2024",
+                "merchantCode": "sport_check",
+                "purchaseAmount": 400,
+                "points_earned": 0
+            }
+        },
+        "points_per_month": 0,
+        "total_expenditure_per_merchant": {
+            "tim_hortons": {
+                "dollars": 49.099999999999994,
+                "transactions": [
+                    "0",
+                    "2",
+                    "4",
+                    "6",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "17",
+                    "18"
+                ]
+            },
+            "sport_check": {
+                "dollars": 781,
+                "transactions": [
+                    "2",
+                    "9",
+                    "10",
+                    "20"
+                ]
+            },
+            "subway": {
+                "dollars": 40.4,
+                "transactions": [
+                    "4",
+                    "15"
+                ]
+            },
+            "apple": {
+                "dollars": 999,
+                "transactions": [
+                    "6"
+                ]
+            },
+            "walmart": {
+                "dollars": 149,
+                "transactions": [
+                    "7",
+                    "19"
+                ]
+            },
+            "dennys": {
+                "dollars": 47,
+                "transactions": [
+                    "15"
+                ]
+            }
+        },
+        "password": "password"
+    }
+}

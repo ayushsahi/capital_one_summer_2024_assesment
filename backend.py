@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+import math
 
 currentDate = datetime.now()
 formattedDate = currentDate.strftime("%d-%m-%Y")
@@ -45,17 +46,17 @@ def applyTransaction(merchantCode: str, purchaseAmount: float, username: str, da
     transactionIndex = str(count + 1)  
 
     if merchantCode in data[username]["TotalExpenditurePerMerchant"].keys():
-        data[username]["TotalExpenditurePerMerchant"][merchantCode]["dollars"] += purchaseAmount
+        data[username]["TotalExpenditurePerMerchant"][merchantCode]["dollars"] += math.floor(purchaseAmount)
         data[username]["TotalExpenditurePerMerchant"][merchantCode]["transactions"].append(transactionIndex)
     else:
-        data[username]["TotalExpenditurePerMerchant"][merchantCode] = { 'dollars': purchaseAmount,
+        data[username]["TotalExpenditurePerMerchant"][merchantCode] = { 'dollars': math.floor(purchaseAmount),
                                                                           'transactions': [ transactionIndex ]}
     
     pointsEarned = 0
     transaction = {
         "date": date,
         "merchantCode": merchantCode,
-        "purchaseAmount": purchaseAmount,
+        "purchaseAmount": math.floor(purchaseAmount),
         "pointsEarned": pointsEarned,
     }
     data[username]["completeTransactionHistory"][transactionIndex] = transaction
@@ -84,27 +85,34 @@ def calculateSpecialPoints(username: str, index: str, date=formattedDate) -> Non
         75: {"sportcheck": 20}
     }
 
-    temp = [totalSportcheck, totalTims, totalSubway]
-    store_indices = {"sportcheck": 0, "tim_hortons": 1, "subway": 2}
+    temp = [math.floor(totalSportcheck), math.floor(totalTims), math.floor(totalSubway)]
 
-    for key, values in rules.items():
-        min_subtractions = float('inf')
-        for store, amount in values.items():
-            index = store_indices[store]
-            max_subtractions_for_store = temp[index] // amount
-            min_subtractions = min(min_subtractions, max_subtractions_for_store)
+    while totalSportcheck >= 75 and totalTims >= 25 and totalSubway >= 25:
+        newMonthlyPoints += 500
+        totalSportcheck -= 75
+        totalTims -= 25
+        totalSubway -= 25
 
-        for store, amount in values.items():
-            index = store_indices[store]
-            temp[index] -= amount * min_subtractions
-            newMonthlyPoints += key * min_subtractions
+    while totalSportcheck >= 25 and totalTims >= 10 and totalSubway >= 10:
+        newMonthlyPoints += 150
+        totalSportcheck -= 25
+        totalTims -= 10
+        totalSubway -= 10
 
-    for remaining in temp:
-        newMonthlyPoints += remaining
-    
-    for merchant, merchant_data in data[username]["TotalExpenditurePerMerchant"].items():
+    while totalSportcheck >= 75 and totalTims >= 25:
+        newMonthlyPoints += 300
+        totalSportcheck -= 75
+        totalTims -= 25
+
+    while totalSportcheck >= 20:
+        newMonthlyPoints += 75
+        totalSportcheck -= 20
+
+    newMonthlyPoints += totalSportcheck + totalTims + totalSubway
+
+    for merchant, merchantData in data[username]["TotalExpenditurePerMerchant"].items():
         if merchant not in ["sportcheck", "tim_hortons", "subway"]:
-            newMonthlyPoints += merchant_data.get("dollars", 0)
+            newMonthlyPoints += merchantData.get("dollars", 0)
     
     data[username]["pointsPerMonth"] = newMonthlyPoints
     saveData(data)

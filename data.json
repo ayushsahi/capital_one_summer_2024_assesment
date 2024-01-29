@@ -4,13 +4,13 @@
             "1": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 4.9,
+                "purchaseAmount": 4,
                 "pointsEarned": 0
             },
             "2": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 2.9,
+                "purchaseAmount": 2,
                 "pointsEarned": 0
             },
             "3": {
@@ -34,7 +34,7 @@
             "6": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 1.9,
+                "purchaseAmount": 1,
                 "pointsEarned": 0
             },
             "7": {
@@ -64,31 +64,31 @@
             "11": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 9.9,
+                "purchaseAmount": 9,
                 "pointsEarned": 0
             },
             "12": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 1.9,
+                "purchaseAmount": 1,
                 "pointsEarned": 0
             },
             "13": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 10.9,
+                "purchaseAmount": 10,
                 "pointsEarned": 0
             },
             "14": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 2.9,
+                "purchaseAmount": 2,
                 "pointsEarned": 0
             },
             "15": {
                 "date": "29-01-2024",
                 "merchantCode": "subway",
-                "purchaseAmount": 21.4,
+                "purchaseAmount": 21,
                 "pointsEarned": 0
             },
             "16": {
@@ -100,13 +100,13 @@
             "17": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 1.9,
+                "purchaseAmount": 1,
                 "pointsEarned": 0
             },
             "18": {
                 "date": "29-01-2024",
                 "merchantCode": "tim_hortons",
-                "purchaseAmount": 1.9,
+                "purchaseAmount": 1,
                 "pointsEarned": 0
             },
             "19": {
@@ -122,10 +122,10 @@
                 "pointsEarned": 0
             }
         },
-        "pointsPerMonth": 5715.5,
+        "pointsPerMonth": 4407,
         "TotalExpenditurePerMerchant": {
             "tim_hortons": {
-                "dollars": 49.099999999999994,
+                "dollars": 41,
                 "transactions": [
                     "1",
                     "2",
@@ -149,7 +149,7 @@
                 ]
             },
             "subway": {
-                "dollars": 40.4,
+                "dollars": 40,
                 "transactions": [
                     "5",
                     "15"
